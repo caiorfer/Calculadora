@@ -1,0 +1,62 @@
+import React, { useState } from "react";
+import { Text, View, TextInput, Button, StyleSheet } from "react-native";
+
+function App() {
+  const [num1, setNum1] = useState("0");
+  const [num2, setNum2] = useState("0");
+  const [resultado, setResultado] = useState(0);
+
+  function somar() {
+    const soma = parseInt(num1) + parseInt(num2);
+    setResultado(soma);
+  }
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.label}>Digite o primeiro número</Text>
+      <TextInput
+        style={styles.input}
+        value={num1}
+        onChangeText={setNum1}
+        keyboardType="numeric"
+      />
+      <Text style={styles.label}>Digite o segundo número</Text>
+      <TextInput
+        style={styles.input}
+        value={num2}
+        onChangeText={setNum2}
+        keyboardType="numeric"
+      />
+      <Button title="Somar" onPress={somar} />
+      <Text style={styles.resultado}>Resultado: {resultado}</Text>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    paddingHorizontal: 20,
+  },
+  label: {
+    marginBottom: 5,
+  },
+  input: {
+    marginBottom: 10,
+    paddingHorizontal: 10,
+    paddingVertical: 8,
+    borderWidth: 1,
+    borderColor: "#ccc",
+    borderRadius: 4,
+    width: 200,
+  },
+  resultado: {
+    marginTop: 20,
+    fontSize: 18,
+    fontWeight: "bold",
+  },
+});
+
+export default App;
