@@ -1,3 +1,4 @@
-Calculadora em algumas linguegens
+Projeto de uma calculadora
+
 
 *feito para estudo*
