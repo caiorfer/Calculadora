@@ -76,8 +76,7 @@ public class Main {
                 double mediaResultado = calc.media(valor1, valor2);
                 System.out.println("O resultado da média entre "+ valor1 + " e " + valor2 + " eh: " + mediaResultado);
                 break;
-            default:
-                System.out.println("Opção inválida.");
+            
         }
     }
 }
